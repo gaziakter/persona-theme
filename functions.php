@@ -1,10 +1,9 @@
 <?php 
 
-function persona_theme_support(){
     /**
  * Essential theme supports
  * */
-function theme_setup(){
+function persona_theme_support(){
 
     /** automatic feed link*/
     add_theme_support( 'automatic-feed-links' );
