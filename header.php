@@ -27,14 +27,16 @@
                   <div id="tp-loading-bar" class="preloader__bar">
                      <div id="tp-loading-line" class="preloader__bar-inner"></div>
                   </div>
-                  <h3 class="preloader__title">harry</h3>
+                  <h3 class="preloader__title">Persona</h3>
                   <div class="preloader__with-text ">
                      <div class="preloader__with-text-wrapper">
-                         <span data-text-preloader="h" class="preloader__title-2">h</span>
-                         <span data-text-preloader="a" class="preloader__title-2">a</span>
-                         <span data-text-preloader="r" class="preloader__title-2">r</span>
-                         <span data-text-preloader="r" class="preloader__title-2">r</span>
-                         <span data-text-preloader="y" class="preloader__title-2">y</span>
+                         <span data-text-preloader="h" class="preloader__title-2">P</span>
+                         <span data-text-preloader="a" class="preloader__title-2">E</span>
+                         <span data-text-preloader="r" class="preloader__title-2">R</span>
+                         <span data-text-preloader="s" class="preloader__title-2">S</span>
+                         <span data-text-preloader="o" class="preloader__title-2">O</span>
+                         <span data-text-preloader="n" class="preloader__title-2">N</span>
+                         <span data-text-preloader="a" class="preloader__title-2">A</span>
                      </div>
                  </div>
                   <p class="preloader__loading">Loading</p>
