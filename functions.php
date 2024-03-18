@@ -51,6 +51,7 @@ function persona_header(){
 }
 
 /**
- * Include scripts
+ * Include file
  */
 include_once('inc/common/scripts.php');
+include_once('inc/persona-kirki.php');
