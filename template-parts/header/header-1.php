@@ -1,3 +1,9 @@
+   <?php 
+   $persona_header_email = get_theme_mod( 'persona_email', 'info@example.com'); 
+   $persona_header_phone = get_theme_mod( 'persona_phone', '+964 742 44 763' ); 
+   $persona_header_time = get_theme_mod( 'persona_time', 'Sunday-Thures 10am-07pm' ); 
+   ?>   
+      
       <!-- header area start -->
       <header>
          <div class="header__area header__white-solid">
@@ -7,17 +13,20 @@
                      <div class="col-xxl-9 col-xl-9 col-lg-9 col-md-10">
                         <div class="header__info">
                            <ul>
+                              <?php if(!empty($persona_header_email)): ?>
                               <li>
-                                 <a href="mailto:info@educal.com">
+                                 <a href="mailto:<?php echo esc_url( $persona_header_email ); ?>">
                                     <span>
                                        <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                           <path d="M11.5 12.9H4.5C2.4 12.9 1 11.85 1 9.4V4.5C1 2.05 2.4 1 4.5 1H11.5C13.6 1 15 2.05 15 4.5V9.4C15 11.85 13.6 12.9 11.5 12.9Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                                           <path d="M11.5 4.85059L9.309 6.60059C8.588 7.17459 7.405 7.17459 6.684 6.60059L4.5 4.85059" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
                                        </svg>
                                     </span> 
-                                    info@example.com
+                                    <?php echo esc_html( $persona_header_email ); ?>
                                  </a>
                               </li>
+                              <?php endif; ?>
+                              <?php if(!empty($persona_header_phone)): ?>
                               <li>
                                  <a href="tel:964-742-44-763">
                                     <span>
@@ -27,9 +36,11 @@
                                           <path d="M14.9997 5.9C14.9997 3.191 12.8087 1 10.0997 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                        </svg>
                                     </span>
-                                    +964 742 44 763
+                                    <?php echo esc_html( $persona_header_phone ); ?>
                                  </a>
                               </li>
+                              <?php endif; ?>
+                              <?php if(!empty($persona_header_time)): ?>
                               <li>
                                  <span>
                                     <span>
@@ -38,9 +49,10 @@
                                           <path d="M10.5969 10.226L8.42691 8.93101C8.04891 8.70701 7.74091 8.16801 7.74091 7.72701V4.85701" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                                        </svg>
                                     </span>
-                                    Sunday-Thures 10am-07pm
+                                    <?php echo esc_html( $persona_header_time ); ?>
                                  </span>
                               </li>
+                              <?php endif; ?>
                            </ul>
                         </div>
                      </div>
@@ -65,9 +77,7 @@
                      <div class="row align-items-center">
                         <div class="col-xxl-2 col-xl-2 col-lg-2 col-md-4 col-sm-5 col-8">
                            <div class="logo logo-border">
-                              <a href="index.html">
-                                 <img src="assets/img/logo/logo-black.svg" alt="logo">
-                              </a>
+                              <?php persona_logo(); ?>
                            </div>
                         </div>
                         <div class="col-xxl-7 col-xl-8 col-lg-8 d-none d-lg-block">

@@ -26,7 +26,7 @@ function persona_header_info(){
             'settings' => 'persona_email',
             'label'    => esc_html__( 'Email Address', 'persona' ),
             'section'  => 'persona_header_info',
-            'default'  => esc_html__( 'Insert you email address here', 'persona' ),
+            'default'  => esc_html__( 'info@example.com', 'persona' ),
             'priority' => 10,
         ]
     );
@@ -36,7 +36,7 @@ function persona_header_info(){
             'settings'    => 'persona_phone',
             'label'       => esc_html__( 'Phone Number', 'persona' ),
             'section'     => 'persona_header_info',
-            'default'     => esc_html__( 'Insert your phone number here', 'persona' ),
+            'default'     => esc_html__( '+964 742 44 763', 'persona' ),
         ]
     );
     
@@ -45,7 +45,7 @@ function persona_header_info(){
             'settings'    => 'persona_time',
             'label'       => esc_html__( 'Open Hour', 'persona' ),
             'section'     => 'persona_header_info',
-            'default'     => esc_html__( 'Insert here opening hour', 'persona' ),
+            'default'     => esc_html__( 'Sunday-Thures 10am-07pm', 'persona' ),
         ]
     );
 }
