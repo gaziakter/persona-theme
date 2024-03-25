@@ -27,6 +27,9 @@ function persona_support(){
     /** post thumbnail **/
     add_theme_support( 'post-thumbnails' );
 
+    /** refresh widgest **/
+    add_theme_support( 'customize-selective-refresh-widgets' );
+
     /** HTML5 support **/
     add_theme_support( 'html5', array( 
         'comment-list', 
@@ -36,8 +39,10 @@ function persona_support(){
         'caption' 
         ) );
 
-    /** refresh widgest **/
-    add_theme_support( 'customize-selective-refresh-widgets' );
+    /** Register Menus */
+    register_nav_menus( array(
+        'main-menu'     =>  __('Main Menu', 'persona')
+    ) );
 
 }
 
@@ -55,3 +60,4 @@ function persona_header(){
 include_once('inc/common/scripts.php');
 include_once('inc/persona-kirki.php');
 include_once('inc/template-function.php');
+include_once('inc/nav-walker.php');

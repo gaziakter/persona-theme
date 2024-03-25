@@ -11,3 +11,16 @@ function persona_logo(){
     <?php 
     }
 }
+
+/** Menu function */
+function persona_menu(){
+    wp_nav_menu( 
+        array(
+            'theme_location'    => 'main-menu',
+            // 'menu_class'        => '',
+            // 'menu_id'           => '',
+            'fallback_cb'       => 'Persona_Walker_Nav_Menu::fallcak',
+            'walker'            => new Persona_Walker_Nav_Menu
+        ) 
+    );
+}
