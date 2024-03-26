@@ -58,6 +58,9 @@ function persona_header(){
 
 /** Include file */
 include_once('inc/common/scripts.php');
-include_once('inc/persona-kirki.php');
 include_once('inc/template-function.php');
 include_once('inc/nav-walker.php');
+
+if(class_exists('kirki')){
+    include_once('inc/persona-kirki.php');
+}

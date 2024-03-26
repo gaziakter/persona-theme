@@ -12,6 +12,18 @@ function persona_logo(){
     }
 }
 
+/** Search Logo function */
+function persona_search_logo(){
+    $default_logo_url = get_template_directory_uri().'/assets/img/logo/logo.svg';
+    $persona_search_logo = get_theme_mod( 'personal_search_logo', $default_logo_url );
+
+    if(!empty( $persona_search_logo)){ ?>
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo esc_url( $persona_search_logo ); ?>" alt="<?php echo get_bloginfo( 'name' ); ?>"></a>
+    
+    <?php 
+    }
+}
+
 /** Menu function */
 function persona_menu(){
     wp_nav_menu( 

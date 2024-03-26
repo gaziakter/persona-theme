@@ -73,6 +73,16 @@ function persona_header_logo(){
             'default'     => get_template_directory_uri().'/assets/img/logo/logo-black.svg'
         ]
     );
+
+    new \Kirki\Field\Image(
+        [
+            'settings'    => 'personal_search_logo',
+            'label'       => esc_html__( 'Search Logo', 'persona' ),
+            'description' => esc_html__( 'Please upload your logo here.', 'persona' ),
+            'section'     => 'persona_header_logo',
+            'default'     => get_template_directory_uri().'/assets/img/logo/logo.svg'
+        ]
+    );
 }
 persona_header_logo();
 
