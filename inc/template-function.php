@@ -13,6 +13,9 @@ function persona_header(){
     elseif($header_default_style == 'header-style-3'){
         get_template_part( 'template-parts/header/header-3' );
     }  
+    elseif($header_default_style == 'header-style-4'){
+        get_template_part( 'template-parts/header/header-4' );
+    }  
 }
 
 

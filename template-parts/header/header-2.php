@@ -1,8 +1,4 @@
-<?php 
-      $persona_header_email = get_theme_mod( 'persona_email', __('info@example.com', 'persona')); 
-      $persona_header_phone = get_theme_mod( 'persona_phone', __('+964 742 44 763', 'persona')); 
-      $persona_header_time = get_theme_mod( 'persona_time', __('Sunday-Thures 10am-07pm', 'persona')); 
-?>      
+   
       <!-- header area start -->
       <header>
          <div class="header__area">
