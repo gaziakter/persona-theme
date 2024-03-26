@@ -33,6 +33,7 @@ function persona_header_info(){
                 'header-style-2' => esc_html__( 'Header Style 02', 'persona' ),
                 'header-style-3' => esc_html__( 'Header Style 03', 'persona' ),
                 'header-style-4' => esc_html__( 'Header Style 04', 'persona' ),
+                'header-style-5' => esc_html__( 'Header Style 05', 'persona' ),
             ],
         ]
     );
