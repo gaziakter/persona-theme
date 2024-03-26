@@ -42,7 +42,8 @@ function persona_support(){
     /** Register Menus */
     register_nav_menus( array(
         'main-menu'     =>  __('Main Menu', 'persona'),
-        'side-menu'     =>  __('Side Menu', 'persona')
+        'side-menu'     =>  __('Side Menu', 'persona'),
+        'footer-menu'     =>  __('Footer Menu', 'persona'),
     ) );
 
     /** Remove blog editior */

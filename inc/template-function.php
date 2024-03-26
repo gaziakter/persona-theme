@@ -27,7 +27,13 @@ function persona_footer(){
 }
 
 
-
+/** Footer copyright */
+function personal_footer_copyright(){
+    $persona_copyright_text = get_theme_mod( 'personal_footer_copyright', __('© 2024 Harry All Rights Reserved.', 'persona') );
+    ?>
+    <p><?php echo wp_kses_post( $persona_copyright_text ); ?></p>
+    <?php
+}
 
 
 
@@ -74,7 +80,7 @@ function persona_side_logo(){
     }
 }
 
-/** Menu function */
+/** Main function */
 function persona_menu(){
     wp_nav_menu( 
         array(
@@ -85,11 +91,22 @@ function persona_menu(){
     );
 }
 
-/** Menu function */
+/** Side function */
 function persona_side_menu(){
     wp_nav_menu( 
         array(
             'theme_location'    => 'side-menu',
+            'fallback_cb'       => 'Persona_Walker_Nav_Menu::fallcak',
+            'walker'            => new Persona_Walker_Nav_Menu
+        ) 
+    );
+}
+
+/** Footer function */
+function persona_footer_menu(){
+    wp_nav_menu( 
+        array(
+            'theme_location'    => 'footer-menu',
             'fallback_cb'       => 'Persona_Walker_Nav_Menu::fallcak',
             'walker'            => new Persona_Walker_Nav_Menu
         ) 

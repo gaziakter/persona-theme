@@ -266,5 +266,28 @@ function persona_social(){
 }
 persona_social();
 
+/** Footer section */
+function persona_footer_section(){
+    new \Kirki\Section(
+        'persona_footer_section',
+        [
+            'title'       => esc_html__( 'Footer Area', 'persona' ),
+            'description' => esc_html__( 'Footer info section.', 'persona' ),
+            'panel'       => 'persona_panel',
+            'priority'    => 160,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'personal_footer_copyright',
+            'label'    => esc_html__( 'Footer copyright', 'persona' ),
+            'section'  => 'persona_footer_section',
+            'default'  => esc_html__( '© 2024 Harry All Rights Reserved.', 'persona' ),
+            'priority' => 10,
+        ]
+    );  
+}
+persona_footer_section();
 
 
