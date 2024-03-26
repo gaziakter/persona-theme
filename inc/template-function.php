@@ -21,6 +21,13 @@ function persona_header(){
     }  
 }
 
+/** Footer function */
+function persona_footer(){
+    get_template_part( 'template-parts/footer/footer-1' );
+}
+
+
+
 
 
 
