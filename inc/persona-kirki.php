@@ -137,6 +137,20 @@ function persona_side_info(){
             'priority' => 10,
         ]
     );
+
+    new \Kirki\Field\Checkbox_Switch(
+        [
+            'settings'    => 'logo_switch',
+            'label'       => esc_html__( 'Logo Switch', 'persona' ),
+            'description' => esc_html__( 'Logo on/off switch', 'persona' ),
+            'section'     => 'persona_side_info',
+            'default'     => 'on',
+            'choices'     => [
+                'on'  => esc_html__( 'Enable', 'persona' ),
+                'off' => esc_html__( 'Disable', 'persona' ),
+            ],
+        ]
+    );
 }
 persona_side_info();
 

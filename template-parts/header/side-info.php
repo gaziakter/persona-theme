@@ -3,6 +3,8 @@
    $personal_side_phone = get_theme_mod( 'personal_side_phone', __('+964 742 44 763', 'persona')); 
    $personal_side_button = get_theme_mod( 'personal_side_button', __('Getting Started', 'persona')); 
    $personal_side_button_url = get_theme_mod( 'personal_side_button_url', __('#', 'persona')); 
+   
+   $personal_logo_switch = get_theme_mod( 'logo_switch', true); 
 ?> 
 
 <!-- offcanvas area start -->
@@ -20,11 +22,13 @@
                </button>
             </div>
             <div class="offcanvas__content">
+                <?php if(!empty($personal_logo_switch)): ?>
                <div class="offcanvas__top mb-70 d-flex justify-content-between align-items-center">
                   <div class="offcanvas__logo logo">
                     <?php persona_side_logo(); ?>
                   </div>
                </div>
+               <?php endif; ?>
                <div class="mobile-menu fix d-lg-none"></div>
                <div class="offcanvas__menu offcanvas__menu-ff-space d-none d-lg-block">
                   <nav>
