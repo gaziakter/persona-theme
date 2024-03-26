@@ -1,5 +1,30 @@
 <?php 
 
+/** Header function */
+function persona_header(){
+    $header_default_style = get_theme_mod( 'header_default_setting','header-style-1' );
+
+    if($header_default_style == 'header-style-1'){
+        get_template_part( 'template-parts/header/header-1' );
+    } 
+    elseif($header_default_style == 'header-style-2'){
+        get_template_part( 'template-parts/header/header-2' );
+    }
+    elseif($header_default_style == 'header-style-3'){
+        get_template_part( 'template-parts/header/header-3' );
+    }  
+}
+
+
+
+
+
+
+
+
+
+
+
 /** Logo function */
 function persona_logo(){
     $default_logo_url = get_template_directory_uri().'/assets/img/logo/logo-black.svg';

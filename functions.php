@@ -49,10 +49,7 @@ function persona_support(){
 
 add_action( 'after_setup_theme', 'persona_support' );
 
-/** Header function */
-function persona_header(){
-    get_template_part( 'template-parts/header/header-1' );
-}
+
 
 
 

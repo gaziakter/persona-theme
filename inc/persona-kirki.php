@@ -21,6 +21,21 @@ function persona_header_info(){
         ]
     );
 
+    new \Kirki\Field\Select(
+        [
+            'settings'    => 'header_default_setting',
+            'label'       => esc_html__( 'Header Select', 'persona' ),
+            'section'     => 'persona_header_info',
+            'default'     => 'header-style-1',
+            'placeholder' => esc_html__( 'Choose default header', 'persona' ),
+            'choices'     => [
+                'header-style-1' => esc_html__( 'Header Style 01', 'persona' ),
+                'header-style-2' => esc_html__( 'Header Style 02', 'persona' ),
+                'header-style-3' => esc_html__( 'Header Style 03', 'persona' ),
+            ],
+        ]
+    );
+
     new \Kirki\Field\Text(
         [
             'settings' => 'persona_email',
