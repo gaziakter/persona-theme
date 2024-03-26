@@ -41,7 +41,8 @@ function persona_support(){
 
     /** Register Menus */
     register_nav_menus( array(
-        'main-menu'     =>  __('Main Menu', 'persona')
+        'main-menu'     =>  __('Main Menu', 'persona'),
+        'side-menu'     =>  __('Side Menu', 'persona')
     ) );
 
 }

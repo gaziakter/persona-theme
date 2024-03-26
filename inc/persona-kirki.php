@@ -73,16 +73,167 @@ function persona_header_logo(){
             'default'     => get_template_directory_uri().'/assets/img/logo/logo-black.svg'
         ]
     );
+}
+persona_header_logo();
+
+
+/** Header Side info section */
+function persona_side_info(){
+    new \Kirki\Section(
+        'persona_side_info',
+        [
+            'title'       => esc_html__( 'Side Info', 'persona' ),
+            'description' => esc_html__( 'Side info section.', 'persona' ),
+            'panel'       => 'persona_panel',
+            'priority'    => 160,
+        ]
+    );
 
     new \Kirki\Field\Image(
         [
-            'settings'    => 'personal_search_logo',
-            'label'       => esc_html__( 'Search Logo', 'persona' ),
+            'settings'    => 'personal_side_logo',
+            'label'       => esc_html__( 'Side logo', 'persona' ),
             'description' => esc_html__( 'Please upload your logo here.', 'persona' ),
-            'section'     => 'persona_header_logo',
-            'default'     => get_template_directory_uri().'/assets/img/logo/logo.svg'
+            'section'     => 'persona_side_info',
+            'default'     => get_template_directory_uri().'/assets/img/logo/logo-black.svg'
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'personal_side_email',
+            'label'    => esc_html__( ' Side Email Address', 'persona' ),
+            'section'  => 'persona_side_info',
+            'default'  => esc_html__( 'info@example.com', 'persona' ),
+            'priority' => 10,
+        ]
+    );
+
+    new \Kirki\Field\Textarea(
+        [
+            'settings'    => 'personal_side_phone',
+            'label'       => esc_html__( 'Side Phone Number', 'persona' ),
+            'section'     => 'persona_side_info',
+            'default'     => esc_html__( '+964 742 44 763', 'persona' ),
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'personal_side_button',
+            'label'    => esc_html__( ' Side Button', 'persona' ),
+            'section'  => 'persona_side_info',
+            'default'  => esc_html__( 'Getting Started', 'persona' ),
+            'priority' => 10,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'personal_side_button_url',
+            'label'    => esc_html__( ' Side Button URL', 'persona' ),
+            'section'  => 'persona_side_info',
+            'default'  => esc_html__( '#', 'persona' ),
+            'priority' => 10,
         ]
     );
 }
-persona_header_logo();
+persona_side_info();
+
+
+/** Header Social section */
+function persona_social(){
+    new \Kirki\Section(
+        'persona_social',
+        [
+            'title'       => esc_html__( 'Social Info', 'persona' ),
+            'description' => esc_html__( 'Social info section.', 'persona' ),
+            'panel'       => 'persona_panel',
+            'priority'    => 160,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'personal_facebook',
+            'label'    => esc_html__( 'Facebook URL', 'persona' ),
+            'section'  => 'persona_social',
+            'default'  => esc_html__( '#', 'persona' ),
+            'priority' => 10,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'personal_twitter',
+            'label'    => esc_html__( 'Twitter URL', 'persona' ),
+            'section'  => 'persona_social',
+            'default'  => esc_html__( '#', 'persona' ),
+            'priority' => 10,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'personal_youtube',
+            'label'    => esc_html__( 'Youtube URL', 'persona' ),
+            'section'  => 'persona_social',
+            'default'  => esc_html__( '#', 'persona' ),
+            'priority' => 10,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'personal_linkedin',
+            'label'    => esc_html__( 'Linkedin URL', 'persona' ),
+            'section'  => 'persona_social',
+            'default'  => esc_html__( '#', 'persona' ),
+            'priority' => 10,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'personal_instagram',
+            'label'    => esc_html__( 'Instagram URL', 'persona' ),
+            'section'  => 'persona_social',
+            'default'  => esc_html__( '', 'persona' ),
+            'priority' => 10,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'personal_flickr',
+            'label'    => esc_html__( 'Flickr URL', 'persona' ),
+            'section'  => 'persona_social',
+            'default'  => esc_html__( '', 'persona' ),
+            'priority' => 10,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'personal_vimeo',
+            'label'    => esc_html__( 'Vimeo URL', 'persona' ),
+            'section'  => 'persona_social',
+            'default'  => esc_html__( '', 'persona' ),
+            'priority' => 10,
+        ]
+    );
+
+    new \Kirki\Field\Text(
+        [
+            'settings' => 'personal_behance',
+            'label'    => esc_html__( 'Behance URL', 'persona' ),
+            'section'  => 'persona_social',
+            'default'  => esc_html__( '', 'persona' ),
+            'priority' => 10,
+        ]
+    );
+}
+persona_social();
+
+
 
