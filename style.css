@@ -23,3 +23,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
 .text-right{
     text-align: right !important;
 }
+
+.home .breadcrumb__area{
+    display: none;
+}

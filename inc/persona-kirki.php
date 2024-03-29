@@ -291,3 +291,25 @@ function persona_footer_section(){
 persona_footer_section();
 
 
+/** Blog section */
+function persona_blog_section(){
+    new \Kirki\Section(
+        'persona_blog_section',
+        [
+            'title'       => esc_html__( 'Blog', 'persona' ),
+            'description' => esc_html__( 'Blog info section.', 'persona' ),
+            'panel'       => 'persona_panel',
+            'priority'    => 160,
+        ]
+    );
+
+    new \Kirki\Field\Image(
+        [
+            'settings'    => 'personal_blog_breadcrumb_bg',
+            'label'       => esc_html__( 'Blog Breadcrumb Image', 'persona' ),
+            'description' => esc_html__( 'Please upload blog Breadcrumb image here.', 'persona' ),
+            'section'     => 'persona_blog_section',
+        ]
+    );  
+}
+persona_blog_section();

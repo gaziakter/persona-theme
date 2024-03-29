@@ -57,3 +57,4 @@
       <!-- back to top end -->
       
       <?php persona_header(); ?>
+      <?php persona_breadcrumb(); ?>
