@@ -98,8 +98,6 @@ function persona_widgets() {
 }
 add_action( 'widgets_init', 'persona_widgets' );
 
-
-
 /** Include files */
 include_once('inc/common/scripts.php');
 include_once('inc/template-function.php');
