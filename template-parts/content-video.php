@@ -1,10 +1,10 @@
 
 
-<?php $video_url = get_field('video_url'); ?>
+<?php $video_url = get_field('insert_video_url'); ?>
 
 
 <article id="post-<?php the_ID(); ?>"
-    class="<?php post_class( 'persona-formate-video postbox__item format-image mb-50 transition-3' ); ?>">
+    class="<?php post_class( 'persona-formate-video postbox__item format-video mb-50 transition-3' ); ?>">
     
     <?php if(has_post_thumbnail()): ?>
     <div class="postbox__thumb postbox__video w-img p-relative">
