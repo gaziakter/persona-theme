@@ -17,7 +17,7 @@
                                         $prev_post = get_previous_post();
                                         $next_post = get_next_post();
                                     ?>
-                                    <?php if(!empty($prev_post) && !empty($next_post))  : ?>
+                                    <?php // if(!empty($prev_post) && !empty($next_post))  : ?>
                                     <div
                                         class="postbox__more-navigation white-bg d-none d-md-flex justify-content-between flex-wrap mb-40">
                                         <div class="postbox__more-left d-flex align-items-center">
@@ -66,7 +66,7 @@
 
                                     <?php echo get_template_part( 'template-parts/biography' ); ?>
 
-                                    <?php endif; ?>
+                                    <?php // endif; ?>
 
                                     <?php endwhile; ?>
                                     <?php endif; ?>
