@@ -7,7 +7,7 @@
     </div>
     <?php endif; ?>
     <!-- Start post meta -->>
-    <?php echo get_template_part( 'template-parts/blog/post-meta' ) ?>
+    <?php echo get_template_part( 'template-parts/blog/post-meta' ); ?>
 
     <div class="postbox__details-content-wrapper mb-40">
         <?php the_content(); ?>
