@@ -176,3 +176,21 @@ function persona_navigation(){
         echo '</ul></nav>';
     }
 }
+
+/**
+ * personal tags
+ */
+function persona_tags(){
+    $post_tags = get_the_tags();
+    if($post_tags){
+        foreach($post_tags as $tag){
+            ?>
+            <a href="<?php echo get_tag_link($tag); ?>"><?php echo $tag->name; ?></a>
+            <?php 
+        }
+    } else{
+        ?>
+        <i>No tags found</i>
+        <?php
+    }
+}
