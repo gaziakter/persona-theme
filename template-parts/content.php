@@ -17,17 +17,12 @@
         <div class="row align-items-center">
             <div class="col-xl-7">
                 <div class="tagcloud tagcloud-sm">
-                    <span>Tags:</span>
+                    <span><?php echo esc_html__('Tags:', 'persona'  ); ?></span>
                     <?php persona_tags(); ?>
                 </div>
             </div>
             <div class="col-xl-5">
-                <div class="postbox__share text-xl-end">
-                    <span>Share On:</span>
-                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                </div>
+                <?php persona_social_share(); ?>
             </div>
         </div>
     </div>

@@ -194,3 +194,22 @@ function persona_tags(){
         <?php
     }
 }
+
+/**
+ * personal Social share
+ */
+function persona_social_share(){ ?>
+    <div class="postbox__share text-xl-end">
+        <span><?php echo esc_html__('Share On:', 'persona'  ); ?></span>
+        <a href="https://www.linkedin.com/shareArticle?url=<?php the_permalink(); ?>" target="_blank">
+            <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="https://twitter.com/intent/tweet?url=<?php the_permalink(); ?>&text=<?php the_title(); ?>" target="_blank">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+    </div>
+<?php
+}
