@@ -1,4 +1,6 @@
-<?php $audio_url = get_field('insert_audio_url'); ?>
+
+<?php $audio_url = function_exists('get_field') ? get_field('insert_audio_url'): null; ?>
+
 
 
 <article id="post-<?php the_ID(); ?>"

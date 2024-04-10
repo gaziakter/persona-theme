@@ -1,6 +1,6 @@
 
+<?php $video_url = function_exists('get_field') ? get_field('insert_video_url'): null; ?>
 
-<?php $video_url = get_field('insert_video_url'); ?>
 
 
 <article id="post-<?php the_ID(); ?>"
