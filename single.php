@@ -81,7 +81,7 @@
                                                 $args = array(
                                                     'post_type' => 'post',
                                                     'posts_per_page' => 6,
-                                                    'post_not_in' => array($related_cat),
+                                                    'post_not_in' => array($current_post_id),
                                                     'category_in' => $related_cat,
                                                     'orderby' => 'rand',
                                                 );
