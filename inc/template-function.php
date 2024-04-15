@@ -213,3 +213,27 @@ function persona_social_share(){ ?>
     </div>
 <?php
 }
+
+/**
+ * display post views
+ */
+function track_post_views(){
+    if(is_single()){
+        global $post;
+        $post_id = $post->ID;
+
+        $views =get_post_meta($post_id, 'post_views', true);
+        $views = $views ? $views : 0;
+
+        $views++;
+        $views = update_post_meta($post_id, 'post_views', $views);
+    }
+}
+add_action( 'wp_head', 'track_post_views' );
+
+ function display_post_view(){
+    if(is_single()){
+        $post_views = get_post_meta(get_the_ID(), 'post_views', true);
+        echo ($post_views ? $post_views : 0);
+    }
+}

@@ -10,7 +10,6 @@
 
     // Get the author's bio/description
     $author_bio = get_the_author_meta('description');
-
     $facebook_url = get_the_author_meta('facebook_url');
     $twitter_url = get_the_author_meta('twitter_url');
     $linkedin_url = get_the_author_meta('linkedin_url');
