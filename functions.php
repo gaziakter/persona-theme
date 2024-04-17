@@ -103,6 +103,7 @@ include_once('inc/common/scripts.php');
 include_once('inc/template-function.php');
 include_once('inc/nav-walker.php');
 include_once('inc/breadcorumb.php');
+include_once('inc/common/comments-form-list.php');
 
 if(class_exists('kirki')){
     include_once('inc/persona-kirki.php');

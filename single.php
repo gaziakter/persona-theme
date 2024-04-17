@@ -93,7 +93,7 @@
                                                 // Define custom query parameters
                                                 $args = array(
                                                     'post_type' => 'post',
-                                                    'posts_per_page' => 6,
+                                                    'posts_per_page' => 2,
                                                     'post_not_in' => array($current_post_id),
                                                     'category_in' => $related_cat,
                                                     'orderby' => 'rand',

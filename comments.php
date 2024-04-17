@@ -10,7 +10,7 @@ if (comments_open()) :
             <h2 class="postbox__comment-title">
                 <?php
                 $comment_count = get_comments_number();
-                echo esc_html($comment_count) . ' ' . _n('Comment', 'Comments', $comment_count, 'harry');
+                echo esc_html($comment_count) . ' ' . _n('Comment', 'Comments', $comment_count, 'persona');
                 ?>
             </h2>
 
