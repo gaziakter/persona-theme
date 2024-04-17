@@ -7,16 +7,16 @@ function custom_comment_form_fields($fields) {
     $req = get_option('require_name_email');
 
     $fields = array(
-        'author' => '<div class="row"><div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6"><div  class="postbox__comment-input"><input type="text" name="author" id="author" placeholder="' . esc_attr__('Name*', 'harry') . '" value="' . esc_attr($commenter['comment_author']) . '" ' . ($req ? 'required' : '') . '></div>
+        'author' => '<div class="row"><div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6"><div  class="postbox__comment-input"><input type="text" name="author" id="author" placeholder="' . esc_attr__('Name*', 'persona') . '" value="' . esc_attr($commenter['comment_author']) . '" ' . ($req ? 'required' : '') . '></div>
      </div>',
         'email' => '<div class="col-xxl-4 col-xl-4 col-lg-6 col-md-6">
         <div class="postbox__comment-input">
-           <input type="email" name="email" id="email" placeholder="' . esc_attr__('Email', 'harry') . '" value="' . esc_attr($commenter['comment_author_email']) . '" ' . ($req ? 'required' : '') . '>
+           <input type="email" name="email" id="email" placeholder="' . esc_attr__('Email', 'persona') . '" value="' . esc_attr($commenter['comment_author_email']) . '" ' . ($req ? 'required' : '') . '>
         </div>
      </div>',
         'url' => '<div class="col-xxl-4 col-xl-4 col-lg-12">
         <div class="postbox__comment-input">
-           <input type="text" name="url" id="url" placeholder="' . esc_attr__('Website', 'harry') . '" value="' . esc_attr($commenter['comment_author_url']) . '">
+           <input type="text" name="url" id="url" placeholder="' . esc_attr__('Website', 'persona') . '" value="' . esc_attr($commenter['comment_author_url']) . '">
         </div>
      </div></div>',
     );
@@ -57,7 +57,7 @@ add_action('comment_form_fields', 'move_comment_textarea_to_bottom');
 function custom_comment_form_agree($fields) {
     $fields['cookies'] = '<div class="col-xxl-12"><div class="postbox__comment-agree d-flex align-items-start mb-25">' .
         '<input class="e-check-input" type="checkbox" id="e-agree" name="wp-comment-agree" value="1" checked>' .
-        '<label class="e-check-label" for="e-agree">' . esc_html__('Save my name, email, and website in this browser for the next time I comment.', 'harry') . '</label></div></div>';
+        '<label class="e-check-label" for="e-agree">' . esc_html__('Save my name, email, and website in this browser for the next time I comment.', 'persona') . '</label></div></div>';
 
     return $fields;
 }
@@ -68,7 +68,7 @@ add_filter('comment_form_fields', 'custom_comment_form_agree');
 function custom_comment_form_submit_button($submit_button) {
     $submit_button = '<div class="col-xxl-12">
     <div class="postbox__comment-btn">
-       <button type="submit" class="tp-btn">' . esc_html__('Submit Comment', 'harry') . '</button>
+       <button type="submit" class="tp-btn">' . esc_html__('Submit Comment', 'persona') . '</button>
     </div>
  </div>';
 
@@ -89,7 +89,7 @@ function custom_comment_list($comment, $args, $depth) {
         // Display pingbacks and trackbacks differently if needed
         ?>
 <li class="pingback">
-    <p><?php esc_html_e('Pingback:', 'harry'); ?> <?php comment_author_link(); ?></p>
+    <p><?php esc_html_e('Pingback:', 'persona'); ?> <?php comment_author_link(); ?></p>
 </li>
 <?php
     } else {
@@ -108,7 +108,7 @@ function custom_comment_list($comment, $args, $depth) {
                 <h5><?php comment_author(); ?></h5>
             </div>
             <?php if ($comment->comment_approved == '0') : ?>
-            <p><?php esc_html_e('Your comment is awaiting moderation.', 'harry'); ?></p>
+            <p><?php esc_html_e('Your comment is awaiting moderation.', 'persona'); ?></p>
             <?php endif; ?>
             <?php comment_text(); ?>
             <div class="postbox__comment-reply">
