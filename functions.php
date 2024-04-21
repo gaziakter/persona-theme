@@ -56,6 +56,18 @@ add_action( 'after_setup_theme', 'persona_support' );
 
 /** Resister sidebar */
 function persona_widgets() {
+
+    /** Blog sidebar */
+    register_sidebar( array(
+		'name'          => __( 'Blog Sidebar', 'persona' ),
+		'id'            => 'blog-sidebar',
+		'description'   => __( 'Widgets in this area will be shown on blog sidebar.', 'persona' ),
+		'before_widget' => '<div id="%1$s" class="sidebar__widget mb-40 %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="sidebar__widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
 	register_sidebar( array(
 		'name'          => __( 'Footer Widget 01', 'persona' ),
 		'id'            => 'footer-widget-01',
