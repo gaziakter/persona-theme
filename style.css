@@ -34,3 +34,8 @@ img {
 .postbox__comment li{
   list-style: none;
 }
+
+.tagcloud a {
+  font-size: 14px !important;
+}
+

@@ -114,6 +114,7 @@ add_action( 'widgets_init', 'persona_widgets' );
 include_once('inc/common/scripts.php');
 include_once('inc/template-function.php');
 include_once('inc/nav-walker.php');
+include_once('inc/sidebar-rc-post-widget.php');
 include_once('inc/breadcorumb.php');
 include_once('inc/common/comments-form-list.php');
 
