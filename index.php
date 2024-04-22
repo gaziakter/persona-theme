@@ -17,11 +17,13 @@
                </div>
             </div>
          </div>
+         <?php if(is_active_sidebar( 'blog-sidebar' )): ?>
          <div class="col-xxl-4 col-lg-4">
             <div class="sidebar__wrapper pl-40">
                   <?php get_sidebar(); ?>
             </div>
          </div>
+         <?php endif; ?>
       </div>
    </div>
 </section>
