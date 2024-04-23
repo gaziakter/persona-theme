@@ -237,3 +237,25 @@ add_action( 'wp_head', 'track_post_views' );
         echo ($post_views ? $post_views : 0);
     }
 }
+
+
+function persona_search_form($custom_markup) {
+    // Define your custom markup
+    $custom_markup = '<div class="sidebar__search">';
+    $custom_markup .= '<form action="/" method="get">';
+    $custom_markup .= '<div class="sidebar__search-input">';
+    $custom_markup .= '<input type="text" name="s" id="search" placeholder="' . esc_attr( 'Enter your keywords...', 'persona' ) . '" value="' . get_search_query() . '">';
+    $custom_markup .= '<button type="submit">';
+    $custom_markup .= '<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">';
+    $custom_markup .= '<path d="M9.55 18.1C14.272 18.1 18.1 14.272 18.1 9.55C18.1 4.82797 14.272 1 9.55 1C4.82797 1 1 4.82797 1 9.55C1 14.272 4.82797 18.1 9.55 18.1Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />';
+    $custom_markup .= '<path d="M19.0002 19.0002L17.2002 17.2002" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />';
+    $custom_markup .= '</svg>';
+    $custom_markup .= '</button>';
+    $custom_markup .= '</div>';
+    $custom_markup .= '</form>';
+    $custom_markup .= '</div>';
+
+    return $custom_markup;
+}
+
+add_filter('get_search_form', 'persona_search_form');
