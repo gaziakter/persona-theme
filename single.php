@@ -58,6 +58,9 @@
                                             ?>
 
                                         <?php endwhile; ?>
+                                        <?php endwhile; ?>
+                                    <?php else: ?>
+                                        <?php echo get_template_part( 'template-parts/content-none'); ?>
                                     <?php endif; ?>
 
                                     <div class="postbox__related mb-65">
