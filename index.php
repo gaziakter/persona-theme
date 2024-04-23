@@ -1,10 +1,14 @@
-<?php get_header(); ?>
+<?php get_header(); 
+
+$post_col = is_active_sidebar( 'blog-sidebar' ) ? 'col-xxl-8 col-lg-8' : 'col-xxl-12 col-lg-12';
+
+?>
 
 <!-- postbox area start -->
 <section class="postbox__area grey-bg-4 pt-120 pb-120">
    <div class="container">
       <div class="row">
-         <div class="col-xxl-8 col-lg-8">
+         <div class="<?php echo esc_attr($post_col ); ?>">
             <div class="postbox__wrapper">
                <?php if (have_posts()) : ?>
                   <?php while (have_posts()) : the_post() ?>
