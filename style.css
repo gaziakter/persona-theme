@@ -39,3 +39,12 @@ img {
   font-size: 14px !important;
 }
 
+.slider__social-9 ul li a svg {
+    -webkit-transform: translateY(-1px);
+    -moz-transform: translateY(-1px);
+    -ms-transform: translateY(-1px);
+    -o-transform: translateY(-1px);
+    transform: translateY(-1px);
+    width: 16px;
+}
+
