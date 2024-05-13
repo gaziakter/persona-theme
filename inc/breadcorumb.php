@@ -41,8 +41,10 @@ function persona_breadcrumb(){
     }
 
     $breadcrumb_bg_img = get_theme_mod('personal_blog_breadcrumb_bg');
+    $breadcrumb_switch = function_exists('get_field') ? get_field('breadcrumb_onoff'): null;
 
     ?>
+        <?php if(!empty($breadcrumb_switch)): ?>
          <!-- breadcrumb area start -->
          <section class="breadcrumb__area pt-130 pb-115 breadcrumb__style-10 black-bg p-relative z-index-1">
             <div class="breadcrumb__bg-4 breadcrumb__bg-overlay m-img include-bg" data-background="<?php echo esc_url( $breadcrumb_bg_img ); ?>"></div>
@@ -60,5 +62,6 @@ function persona_breadcrumb(){
                </div>
          </section>
          <!-- breadcrumb area end -->
+         <?php endif; ?>
 <?php
 }
