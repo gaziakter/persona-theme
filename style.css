@@ -52,3 +52,9 @@ img {
     height: 480px !important;
 }
 
+body .testimonial__slider-9-thumb-nav img {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    padding: 4px;
+}
