@@ -58,3 +58,36 @@ body .testimonial__slider-9-thumb-nav img {
     border-radius: 50%;
     padding: 4px;
 }
+
+/* woo rating */
+.star-rating{
+	position: relative;
+	display: inline-block;
+}
+.star-rating span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	font-size: 0px;
+	display: flex;
+}
+.star-rating::before {
+	font-family: "ElegantIcons";
+	content: "\e031\e031\e031\e031\e031";
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	color: var(--tp-common-yellow-5);
+	font-size: 11px;
+}
+.star-rating span::before {
+	font-family: "ElegantIcons";
+	content: "\e033\e033\e033\e033\e033";
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	color: var(--tp-common-yellow-5);
+	font-weight: 900;
+	display: inline-block;
+	font-size: 11px;
+}
+

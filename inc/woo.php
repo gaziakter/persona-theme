@@ -76,27 +76,13 @@ function persona_product_grid()
             </div>
             <div class="product__content">
                 <div class="product__rating d-flex">
-                    <span>
-                        <i class="icon_star"></i>
-                    </span>
-                    <span>
-                        <i class="icon_star"></i>
-                    </span>
-                    <span>
-                        <i class="icon_star"></i>
-                    </span>
-                    <span>
-                        <i class="icon_star"></i>
-                    </span>
-                    <span>
-                        <i class="icon_star_alt"></i>
-                    </span>
+                    <?php woocommerce_template_loop_rating(); ?>
                 </div>
                 <h3 class="product__title">
-                    <a href="product-details.html">Level Bolt Smart Lock</a>
+                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                 </h3>
                 <div class="product__price">
-                    <span class="product__ammount">$239.00</span>
+                    <span class="product__ammount"><?php woocommerce_template_loop_price(); ?></span>
                 </div>
             </div>
         </div>
