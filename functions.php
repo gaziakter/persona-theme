@@ -27,6 +27,9 @@ function persona_support() {
     /** post thumbnail **/
     add_theme_support( 'post-thumbnails' );
 
+    /** WooCommerce support */
+    add_theme_support( 'woocommerce' );
+
     /** refresh widgest **/
     add_theme_support( 'customize-selective-refresh-widgets' );
 
@@ -125,7 +128,6 @@ include_once 'inc/template-function.php';
 include_once 'inc/nav-walker.php';
 include_once 'inc/sidebar-rc-post-widget.php';
 include_once 'inc/breadcorumb.php';
-include_once 'inc/common/comments-form-list.php';
 
 if ( class_exists( 'kirki' ) ) {
     include_once 'inc/persona-kirki.php';
