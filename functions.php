@@ -52,6 +52,9 @@ function persona_support() {
     /** Remove blog editior */
     remove_theme_support( 'widgets-block-editor' );
 
+    /** Remove woocommerce default style */
+    add_filter( 'woocommerce_enqueue_styles', '__return_false');
+
 }
 
 add_action( 'after_setup_theme', 'persona_support' );
