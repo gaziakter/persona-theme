@@ -132,6 +132,12 @@ include_once 'inc/nav-walker.php';
 include_once 'inc/sidebar-rc-post-widget.php';
 include_once 'inc/breadcorumb.php';
 
+/** Include kirki file */
 if ( class_exists( 'kirki' ) ) {
     include_once 'inc/persona-kirki.php';
+}
+
+/** Woocommerce file inclode */
+if ( class_exists( 'WooCommerce' ) ) {
+    include_once 'inc/woo.php';
 }
