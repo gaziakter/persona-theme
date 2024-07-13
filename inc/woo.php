@@ -29,7 +29,7 @@ function persona_product_grid()
                 </a>
 
                 <div class="product__badge d-flex flex-column flex-wrap">
-                    <span class="product__badge-item">sale</span>
+                    <?php woocommerce_show_product_loop_sale_flash(); ?>
                 </div>
 
                 <div class="product__action d-flex flex-column flex-wrap">
