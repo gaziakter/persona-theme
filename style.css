@@ -91,3 +91,18 @@ body .testimonial__slider-9-thumb-nav img {
 	font-size: 11px;
 }
 
+/* View cart button*/
+.added_to_cart.wc-forward {
+	font-weight: 600;
+	font-size: 15px;
+	color: var(--tp-common-white);
+	background-color: var(--tp-common-black);
+	display: inline-block;
+	padding: 7px 25px;
+	text-align: center;
+	width: 100%;
+}
+.product-add-cart-btn.added{
+	display: none;
+}
+
