@@ -14,6 +14,10 @@ remove_action('woocommerce_after_shop_loop_item_title', 'woocommerce_template_lo
 remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_product_link_close', 5);
 remove_action('woocommerce_after_shop_loop_item', 'woocommerce_template_loop_add_to_cart', 10);
 
+add_filter( 'woosw_button_position_archive', '__return_false' );
+add_filter( 'woosw_button_position_single', '__return_false' );
+add_filter( 'woosq_button_position', '__return_false' );
+
 
 function persona_product_grid()
 {
