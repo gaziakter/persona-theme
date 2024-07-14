@@ -61,7 +61,6 @@ $post_col = is_active_sidebar( 'blog-sidebar' ) ? 'col-xxl-8 col-lg-8' : 'col-xx
                                             ?>
 
                                         <?php endwhile; ?>
-                                        <?php endwhile; ?>
                                     <?php else: ?>
                                         <?php echo get_template_part( 'template-parts/content-none'); ?>
                                     <?php endif; ?>
