@@ -122,6 +122,18 @@ function persona_widgets() {
         'before_title'  => '<h3 class="footer__widget-title">',
         'after_title'   => '</h3>',
     ] );
+
+    register_sidebar( [
+        'name'          => __( 'Shop Sidebar', 'persona' ),
+        'id'            => 'shop-sidebar',
+        'description'   => __( 'Widgets in this area will be shown on shop page sidebar.',
+            'persona' ),
+        'before_widget' =>
+        '<div id="%1$s" class="shop__widget tp-accordion %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="footer__widget-title">',
+        'after_title'   => '</h3>',
+    ] );
 }
 add_action( 'widgets_init', 'persona_widgets' );
 
