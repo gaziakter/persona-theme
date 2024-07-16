@@ -17,46 +17,47 @@ Use it to make something cool, have fun, and share what you've learned with othe
 */
 
 .footer__link ul li {
-  display: inline-block;
-  margin-left: 15px;
-}
-.text-right {
-  text-align: right !important;
+    display: inline-block;
+    margin-left: 15px;
 }
 
 .home .breadcrumb__area {
-  display: none;
+    display: none;
+}
+img {
+	height: auto;
+}
+.postbox__comment {
+	list-style: none;
 }
 
-img {
-  height: auto;
+.postbox__comment  .children{
+    margin-left: 70px;
+    margin-top: 20px;
 }
-.postbox__comment li{
-  list-style: none;
+#reply-title a {
+	font-size: 15px;
+	margin-left: 5px;
+	color: var(--tp-theme-1);
+	font-weight: 500;
 }
 
 .tagcloud a {
-  font-size: 14px !important;
+	font-size: 14px !important;
 }
-
 .slider__social-9 ul li a svg {
-    -webkit-transform: translateY(-1px);
-    -moz-transform: translateY(-1px);
-    -ms-transform: translateY(-1px);
-    -o-transform: translateY(-1px);
-    transform: translateY(-1px);
-    width: 16px;
+	width: 14px;
 }
-
-.portfolio__item-9 {
-    height: 480px !important;
+body .portfolio__item-9 {
+	height: 480px;
 }
 
 body .testimonial__slider-9-thumb-nav img {
-    width: 62px;
-    height: 62px;
-    border-radius: 50%;
-    padding: 4px;
+	border-radius: 50%;
+}
+
+.portfolio__details-img-list-social {
+	z-index: 33;
 }
 
 /* woo rating */
@@ -91,7 +92,7 @@ body .testimonial__slider-9-thumb-nav img {
 	font-size: 11px;
 }
 
-/* View cart button*/
+
 .added_to_cart.wc-forward {
 	font-weight: 600;
 	font-size: 15px;
@@ -105,7 +106,6 @@ body .testimonial__slider-9-thumb-nav img {
 .product-add-cart-btn.added{
 	display: none;
 }
-
 
 .price_slider.ui-slider{
 	background: #ddd;
@@ -355,4 +355,3 @@ body:not(.woocommerce-block-theme-has-button-styles) .wc-block-components-button
 .woocommerce-mini-cart__buttons.buttons {
 	padding: 0 30px;
 }
-
