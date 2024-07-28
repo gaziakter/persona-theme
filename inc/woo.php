@@ -30,6 +30,18 @@ add_filter( 'woosq_button_position', '__return_false' );
 add_filter( 'woosc_button_position_archive', '__return_false' );
 add_filter( 'woosc_button_position_single', '__return_false' );
 
+function persona_product_widget_sidebar($class){
+    $class = '<div class="persona-pro-list-sidebar">';
+    return  $class;
+}
+add_filter('woocommerce_before_widget_product_list', 'persona_product_widget_sidebar');
+
+function persona_product_widget_sidebar2($class){
+    $class = '</div>';
+    return  $class;
+}
+add_filter('woocommerce_after_widget_product_list', 'persona_product_widget_sidebar2');
+
 
 function persona_product_grid()
 {
