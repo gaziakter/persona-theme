@@ -18,7 +18,7 @@
 defined( 'ABSPATH' ) || exit;
 
 ?>
-<li>
+<li class="gazi-akter">
 	<?php do_action( 'woocommerce_widget_product_review_item_start', $args ); ?>
 
 	<?php

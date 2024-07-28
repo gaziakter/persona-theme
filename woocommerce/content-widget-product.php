@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The template for displaying product widget entries.
  *
@@ -14,30 +15,50 @@
  * @version 3.5.5
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (!defined('ABSPATH')) {
 	exit;
 }
 
 global $product;
 
-if ( ! is_a( $product, 'WC_Product' ) ) {
+if (!is_a($product, 'WC_Product')) {
 	return;
 }
 
 ?>
-<li>
-	<?php do_action( 'woocommerce_widget_product_item_start', $args ); ?>
+<div class="rc__post d-flex align-items-center">
+<?php do_action('woocommerce_widget_product_item_start', $args); ?>
+	<div class="rc__post-thumb">
+		<a href="<?php the_permalink(); ?>"><?php echo $product->get_image(); // PHPCS:Ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
+		?></a>
+	</div>
+	<div class="rc__post-content">
+		<h3 class="rc__post-title">
+			<a href="<?php the_permalink(); ?>"><?php echo wp_kses_post($product->get_name()); ?></a>
+		</h3>
+		<div class="rc__meta">
+		<?php echo $product->get_price_html(); // PHPCS:Ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+		</div>
+	</div>
+	<?php do_action('woocommerce_widget_product_item_end', $args); ?>
+</div>
 
-	<a href="<?php echo esc_url( $product->get_permalink() ); ?>">
-		<?php echo $product->get_image(); // PHPCS:Ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
-		<span class="product-title"><?php echo wp_kses_post( $product->get_name() ); ?></span>
+<li class="gazi d-none">
+	<?php do_action('woocommerce_widget_product_item_start', $args); ?>
+
+	<a href="<?php echo esc_url($product->get_permalink()); ?>">
+		<?php echo $product->get_image(); // PHPCS:Ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
+		?>
+		<span class="product-title"><?php echo wp_kses_post($product->get_name()); ?></span>
 	</a>
 
-	<?php if ( ! empty( $show_rating ) ) : ?>
-		<?php echo wc_get_rating_html( $product->get_average_rating() ); // PHPCS:Ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+	<?php if (!empty($show_rating)) : ?>
+		<?php echo wc_get_rating_html($product->get_average_rating()); // PHPCS:Ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
+		?>
 	<?php endif; ?>
 
-	<?php echo $product->get_price_html(); // PHPCS:Ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+	<?php echo $product->get_price_html(); // PHPCS:Ignore WordPress.Security.EscapeOutput.OutputNotEscaped 
+	?>
 
-	<?php do_action( 'woocommerce_widget_product_item_end', $args ); ?>
+	<?php do_action('woocommerce_widget_product_item_end', $args); ?>
 </li>
