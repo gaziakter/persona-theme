@@ -30,17 +30,17 @@ add_filter( 'woosq_button_position', '__return_false' );
 add_filter( 'woosc_button_position_archive', '__return_false' );
 add_filter( 'woosc_button_position_single', '__return_false' );
 
-function persona_product_widget_sidebar($class){
+function persona_product_widget_sidebar_before($class){
     $class = '<div class="persona-pro-list-sidebar">';
     return  $class;
 }
-add_filter('woocommerce_before_widget_product_list', 'persona_product_widget_sidebar');
+add_filter('woocommerce_before_widget_product_list', 'persona_product_widget_sidebar_before');
 
-function persona_product_widget_sidebar2($class){
+function persona_product_widget_sidebar_after($class){
     $class = '</div>';
     return  $class;
 }
-add_filter('woocommerce_after_widget_product_list', 'persona_product_widget_sidebar2');
+add_filter('woocommerce_after_widget_product_list', 'persona_product_widget_sidebar_after');
 
 
 function persona_product_grid()
