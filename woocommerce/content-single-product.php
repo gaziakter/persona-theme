@@ -48,27 +48,6 @@ if (post_password_required()) {
 					do_action('woocommerce_before_single_product_summary');
 					?>
 				</div>
-				<div class="product__details-thumb-nav tp-tab">
-					<nav>
-						<div class="nav nav-tabs justify-content-sm-between" id="nav-tab" role="tablist">
-							<button class="nav-link active" id="nav-one-tab" data-bs-toggle="tab" data-bs-target="#nav-one" type="button" role="tab" aria-controls="nav-one" aria-selected="true">
-								<img src="assets/img/product/details/sm/product-details-sm-1.jpg" alt="">
-							</button>
-							<button class="nav-link" id="nav-two-tab" data-bs-toggle="tab" data-bs-target="#nav-two" type="button" role="tab" aria-controls="nav-two" aria-selected="false">
-								<img src="assets/img/product/details/sm/product-details-sm-2.jpg" alt="">
-							</button>
-							<button class="nav-link" id="nav-three-tab" data-bs-toggle="tab" data-bs-target="#nav-three" type="button" role="tab" aria-controls="nav-three" aria-selected="false">
-								<img src="assets/img/product/details/sm/product-details-sm-3.jpg" alt="">
-							</button>
-							<button class="nav-link" id="nav-four-tab" data-bs-toggle="tab" data-bs-target="#nav-four" type="button" role="tab" aria-controls="nav-four" aria-selected="false">
-								<img src="assets/img/product/details/sm/product-details-sm-4.jpg" alt="">
-							</button>
-							<button class="nav-link" id="nav-five-tab" data-bs-toggle="tab" data-bs-target="#nav-five" type="button" role="tab" aria-controls="nav-five" aria-selected="false">
-								<img src="assets/img/product/details/sm/product-details-sm-5.jpg" alt="">
-							</button>
-						</div>
-					</nav>
-				</div>
 			</div>
 		</div>
 		<div class="col-xl-5 col-lg-6">
