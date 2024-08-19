@@ -2404,5 +2404,29 @@
 		tp_tab_line_2();
 	}
 
+		// product details thumb slider
+		$(document).ready(function() {
+			setTimeout(() => {
+				if($('.flex-control-thumbs > li').length >=5){
+					$(".flex-control-thumbs").addClass("product-thumbnails-slider");
+				}
+				
+	
+				$('.product-thumbnails-slider').slick({
+				dots: false,
+				arrows: false,
+				prevArrow: '<div class="prev"><i class="far fa-angle-left"></i></div>',
+				nextArrow: '<div class="next"><i class="far fa-angle-right"></i></div>',
+				autoplay: false,
+				Speed: 2000,
+				slidesToShow: 5,
+				slidesToScroll: 1,
+				focusOnSelect: true,
+				vertical: false,
+				});
+			}, 100);	
+	
+		});
+
 
 })(jQuery);
