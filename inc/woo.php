@@ -118,7 +118,7 @@ function persona_product_details(){
     </div>
 </div>
 
-<p>Shop Harry.com for every day low prices. Free shipping on orders $35+ or Pickup In-store and get</p>
+<?php woocommerce_template_single_excerpt(); ?>
 
 <div class="product__details-price">
     <?php woocommerce_template_single_price(); ?>
@@ -214,7 +214,7 @@ add_action('woocommerce_single_product_summary', 'persona_product_details');
 function persona_sale_percentage(){
     global $product;
     $output = '';
-    $icon = esc_html__("-",'harry');
+    $icon = esc_html__("-",'persona');
  
     if ( $product->is_on_sale() && $product->is_type( 'variable' ) ) {
        $percentage = ceil(100 - ($product->get_variation_sale_price() / $product->get_variation_regular_price( 'min' )) * 100);
