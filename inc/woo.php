@@ -121,9 +121,10 @@ function persona_product_details(){
 <p>Shop Harry.com for every day low prices. Free shipping on orders $35+ or Pickup In-store and get</p>
 
 <div class="product__details-price">
-    <span class="product__details-ammount old-ammount">$82.00</span>
-    <span class="product__details-ammount new-ammount">$54.00</span>
-    <span class="product__details-offer">-12%</span>
+    <?php woocommerce_template_single_price(); ?>
+    <?php if(!empty(persona_sale_percentage())): ?>
+    <span class="product__details-offer"><?php echo persona_sale_percentage(); ?></span>
+    <?php endif; ?>
 </div>
 
 <div class="product__details-quantity">
@@ -207,6 +208,30 @@ function persona_product_details(){
 }
 
 add_action('woocommerce_single_product_summary', 'persona_product_details');
+
+
+// persona_sale_percentage
+function persona_sale_percentage(){
+    global $product;
+    $output = '';
+    $icon = esc_html__("-",'harry');
+ 
+    if ( $product->is_on_sale() && $product->is_type( 'variable' ) ) {
+       $percentage = ceil(100 - ($product->get_variation_sale_price() / $product->get_variation_regular_price( 'min' )) * 100);
+       $output .= '<div class="product-percentage-badges"><span class="tp-product-details-offer">'. $icon . $percentage.'%</span></div>';
+ 
+    } elseif( $product->is_on_sale() && $product->get_regular_price()  && !$product->is_type( 'grouped' )) {
+       $percentage = ceil(100 - ($product->get_sale_price() / $product->get_regular_price()) * 100);
+       $output .= '<div class="product-percentage-badges">';
+       $output .= '<span class="tp-product-details-offer">'.$icon . $percentage.'%</span>';
+       $output .= '</div>';
+    }
+    return $output;
+ }
+ 
+
+
+
 
 
 // product add to cart button
