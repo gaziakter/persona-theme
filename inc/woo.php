@@ -110,28 +110,11 @@ function persona_product_details(){
     <span><?php echo $product->get_stock_quantity(); ?> <?php echo esc_html( $stock_label ); ?></span>
 </div>
 <?php endif; ?>
-<h3 class="product__details-title">Apple Watch Series 7 </h3>
+<h3 class="product__details-title"><?php the_title( ); ?></h3>
 
 <div class="product__details-rating d-flex align-items-center">
     <div class="product__rating product__rating-2 d-flex">
-        <span>
-            <i class="icon_star"></i>
-        </span>
-        <span>
-            <i class="icon_star"></i>
-        </span>
-        <span>
-            <i class="icon_star"></i>
-        </span>
-        <span>
-            <i class="icon_star"></i>
-        </span>
-        <span>
-            <i class="icon_star_alt"></i>
-        </span>
-    </div>
-    <div class="product__details-rating-count">
-        <span>(4 customer review)</span>
+        <?php woocommerce_template_single_rating(); ?>
     </div>
 </div>
 
