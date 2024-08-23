@@ -97,12 +97,19 @@ add_action('woocommerce_before_shop_loop_item', 'persona_product_grid');
 
 
 function persona_product_details(){
+        /** Globla veribals */
+        global $post;
+        global $product;
+        global $woocommerce;
+
+        $stock_label = $product->get_stock_status() == 'instock' ? 'In Stock' : '';
     ?>
 			<div class="product__details-wrapper">
-
+<?php if(!empty($product->get_stock_quantity())): ?>
 <div class="product__details-stock">
-    <span>18 In Stock</span>
+    <span><?php echo $product->get_stock_quantity(); ?> <?php echo esc_html( $stock_label ); ?></span>
 </div>
+<?php endif; ?>
 <h3 class="product__details-title">Apple Watch Series 7 </h3>
 
 <div class="product__details-rating d-flex align-items-center">
