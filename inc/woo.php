@@ -1,4 +1,4 @@
-<?php
+d<?php
 
 remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20);
 remove_action('woocommerce_before_shop_loop', 'woocommerce_result_count', 20);
@@ -130,31 +130,18 @@ function persona_product_details(){
 <div class="product__details-action">
     <?php woocommerce_template_single_add_to_cart(); ?>
 
-    <button type="button" class="product-action-btn">
+    <div class="product-action-btn">
         <?php echo do_shortcode('[woosw]'); ?>
         <span class="product-action-tooltip">Add To Wishlist</span>
-    </button>
-    <button type="button" class="product-action-btn">
+    </div>
+    <div class="product-action-btn">
         <?php echo do_shortcode('[woosc]'); ?>
         <span class="product-action-tooltip">Add To Compare</span>
-    </button>
+    </div>
 </div>
-<div class="product__details-sku product__details-more">
-    <p>SKU:</p>
-    <span>29045-SB-8</span>
-</div>
-<div class="product__details-categories product__details-more">
-    <p>Categories:</p>
-    <span>
-        <a href="#">iPhone Cases,</a>
-    </span>
-    <span>
-        <a href="#">Android Cases,</a>
-    </span>
-    <span>
-        <a href="#">Accessories</a>
-    </span>
-</div>
+
+<?php woocommerce_template_single_meta(); ?>
+
 <div class="product__details-tags">
     <span>Tags:</span>
     <a href="#">iPhone</a>
