@@ -22,6 +22,7 @@ remove_action('woocommerce_single_product_summary', 'woocommerce_template_single
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30);
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40);
 remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_sharing', 50);
+remove_action('woocommerce_sidebar', 'woocommerce_get_sidebar', 10);
 
 /** Remove product default wish and quick view */
 add_filter( 'woosw_button_position_archive', '__return_false' );
