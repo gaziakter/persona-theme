@@ -24,15 +24,21 @@ if ( $related_products ) : ?>
 	<section class="related products">
 
 		<?php
-		$heading = apply_filters( 'woocommerce_product_related_products_heading', __( 'Related products', 'woocommerce' ) );
+		$heading = apply_filters( 'woocommerce_product_related_products_heading', __( 'Related products', 'harry' ) );
 
 		if ( $heading ) :
 			?>
-			<h2><?php echo esc_html( $heading ); ?></h2>
+			<h2 class="section__title-13 mb-35"><?php echo esc_html( $heading ); ?></h2>
 		<?php endif; ?>
 		
-		<?php woocommerce_product_loop_start(); ?>
-
+		<?php 
+			if(count($related_products) >=4){
+				$rel_slider_active = 'rel-slider';
+			}else{
+				$rel_slider_active = 'row row-cols-xl-4';
+			}
+		?>
+			<div class="<?php echo esc_attr($rel_slider_active); ?>">
 			<?php foreach ( $related_products as $related_product ) : ?>
 
 					<?php
@@ -44,8 +50,9 @@ if ( $related_products ) : ?>
 					?>
 
 			<?php endforeach; ?>
+			</div>
 
-		<?php woocommerce_product_loop_end(); ?>
+		<?php // woocommerce_product_loop_end(); ?>
 
 	</section>
 	<?php
