@@ -74,6 +74,7 @@
                                        </a>
                                     </li>
                                     <?php endif; ?>
+                                    <?php if ( class_exists( 'WooCommerce' ) ): ?>
                                     <li>
                                        <button class="cartmini-open-btn">
                                           <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -81,9 +82,10 @@
                                              <path d="M17.286 19C17.7594 19 18.1431 18.6163 18.1431 18.1429C18.1431 17.6695 17.7594 17.2857 17.286 17.2857C16.8126 17.2857 16.4288 17.6695 16.4288 18.1429C16.4288 18.6163 16.8126 19 17.286 19Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                              <path d="M1.00012 1H4.42869L6.72584 12.4771C6.80422 12.8718 7.0189 13.2263 7.3323 13.4785C7.64571 13.7308 8.03786 13.8649 8.44012 13.8571H16.7716C17.1738 13.8649 17.566 13.7308 17.8794 13.4785C18.1928 13.2263 18.4075 12.8718 18.4858 12.4771L19.8573 5.28571H5.28584" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                           </svg>                                             
-                                          <span class="tp-item-count">3</span>                                            
+                                          <span id="tp-cart-item" class="tp-item-count cart__count"><?php echo esc_html(WC()->cart->cart_contents_count); ?></span>                                            
                                        </button>
                                     </li>
+                                    <?php endif; ?>
                                  </ul>
                               </div>
                               <div class="header__hamburger ml-30 d-xl-none">
