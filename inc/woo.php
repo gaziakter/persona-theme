@@ -45,6 +45,38 @@ d<?php
     }
     add_filter('woocommerce_after_widget_product_list', 'persona_product_widget_sidebar_after');
 
+    
+// woocommerce mini cart content
+add_filter('woocommerce_add_to_cart_fragments', function ($fragments) {
+    ob_start();
+    ?>
+    <div class="mini_shopping_cart_box">
+        <?php woocommerce_mini_cart(); ?>
+    </div>
+    <?php $fragments['.mini_shopping_cart_box'] = ob_get_clean();
+    return $fragments;
+});
+
+// woocommerce mini cart count icon
+if ( ! function_exists( 'shofy_header_add_to_cart_fragment' ) ) {
+    function shofy_header_add_to_cart_fragment( $fragments ) {
+        ob_start();
+        ?>
+        <span class="tp-item-count cart__count" id="tp-cart-item">
+            <?php echo esc_html( WC()->cart->cart_contents_count ); ?>
+        </span>
+        <?php
+        $fragments['#tp-cart-item'] = ob_get_clean();
+
+        return $fragments;
+    }
+}
+add_filter( 'woocommerce_add_to_cart_fragments', 'shofy_header_add_to_cart_fragment' );
+
+
+
+
+
     /**
      * Product grid
      *
