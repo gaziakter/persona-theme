@@ -74,6 +74,59 @@ if ( ! function_exists( 'shofy_header_add_to_cart_fragment' ) ) {
 add_filter( 'woocommerce_add_to_cart_fragments', 'shofy_header_add_to_cart_fragment' );
 
 
+// harry_shopping_cart
+function harry_shopping_cart(){
+    ob_start();
+    ?>
+
+    <div class="cartmini__area">
+         <div class="cartmini__wrapper d-flex justify-content-between flex-column">
+            <div class="cartmini__top-wrapper ">
+               <div class="cartmini__top p-relative">
+                  <div class="cartmini__title">
+                     <h4><?php print esc_html__('Shopping cart','harry'); ?></h4>
+                  </div>
+                  <div class="cartmini__close">
+                     <button type="button" class="cartmini__close-btn cartmini-close-btn"><i class="fal fa-times"></i></button>
+                  </div>
+               </div>
+               <div class="cartmini__widget">
+                    <div class="mini_shopping_cart_box"><?php woocommerce_mini_cart(); ?></div>
+               </div>
+               <!-- for wp -->
+               <div class="header-mini-cart"></div>
+            </div>
+         </div>
+      </div>
+
+
+
+    <div class="cartmini__area d-none">
+        <div class="cartmini__wrapper">
+            <div class="cartmini__top-wrapper">
+               <div class="cartmini__top p-relative">
+                  <div class="cartmini__title">
+                     <h4><?php print esc_html__('Shopping cart','harry'); ?></h4>
+                  </div>
+                  <div class="cartmini__close">
+                     <button type="button" class="cartmini__close-btn cartmini-close-btn"><i class="fal fa-times"></i></button>
+                  </div>
+               </div>
+               <div class="cartmini__widget">
+                    <div class="mini_shopping_cart_box"><?php woocommerce_mini_cart(); ?></div>
+               </div>
+               <!-- for wp -->
+            </div>
+        </div>
+
+        <div class="header-mini-cart"></div>
+    </div>
+    <?php
+    return ob_get_clean();
+}
+
+
+
 
 
 

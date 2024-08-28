@@ -244,44 +244,7 @@
          </div>
       </div>
       <!-- cart mini area end -->
+      <?php if ( class_exists( 'WooCommerce' ) ): ?>
+       <?php echo harry_shopping_cart(); ?>
+       <?php endif; ?>
 
-      <!-- newsletter popup area start -->
-      <div class="newsletter__area newsletter__area-3 newsletter-popup">
-         <div class="newsletter__wrapper newsletter__wrapper-3">
-            <div class="newsletter__close newsletter__close-3">
-               <button type="button" class="newsletter__close-btn newsletter__close-btn-3 newsletter-close-btn">
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                     <path d="M17 1L1 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                     <path d="M1 1L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>                     
-               </button>
-            </div>
-            <div class="newsletter__thumb newsletter__thumb-3 include-bg" data-background="assets/img/newsletter/newsletter-3.jpg"></div>
-            <span class="newsletter__title-pre">Harry Discount</span>
-            <h3 class="newsletter__title-3">Get 16% off</h3>
-            <p>Subscribe now and receive a discount on <br> your first order</p>
-
-            <form action="#">
-               <div class="newsletter__input newsletter__input-2 newsletter__input-3">
-                  <input type="email" placeholder="Your email address">
-                  <button type="button">Submit 
-                     <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2.4 1H13.6C14.37 1 15 1.63 15 2.4V10.8C15 11.57 14.37 12.2 13.6 12.2H2.4C1.63 12.2 1 11.57 1 10.8V2.4C1 1.63 1.63 1 2.4 1Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        <path d="M15 2.39999L8 7.29999L1 2.39999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                     </svg>
-                  </button>
-               </div>
-            </form>
-            <div class="newsletter__proposal">
-               <p><a href="register.html">Signup</a> for Exclusive Updates</p>
-            </div>
-            <div class="newsletter__social">
-               <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-               <a href="#"><i class="fa-brands fa-twitter"></i></a>
-               <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-               <a href="#"><i class="fa-brands fa-youtube"></i></a>
-            </div>
-         </div>
-      </div>
-      <div class="newsletter-overlay"></div>
-      <!-- newsletter popup area end -->
