@@ -43,7 +43,11 @@ function persona_product_widget_sidebar_after($class){
 }
 add_filter('woocommerce_after_widget_product_list', 'persona_product_widget_sidebar_after');
 
-
+/**
+ * Product grid
+ *
+ * @return void
+ */
 function persona_product_grid()
 {
     /** Globla veribals */
@@ -95,6 +99,66 @@ function persona_product_grid()
 }
 
 add_action('woocommerce_before_shop_loop_item', 'persona_product_grid');
+
+
+/**
+ * Product list
+ *
+ * @return void
+ */
+function persona_product_list()
+{
+    /** Globla veribals */
+    global $post;
+    global $product;
+    global $woocommerce;
+?>
+        <div class="product__item p-relative transition-3 mb-50">
+            <div class="product__thumb w-img p-relative fix">
+                <a href="<?php the_permalink(); ?>">
+                    <?php the_post_thumbnail();  ?>
+                </a>
+
+                <div class="product__badge d-flex flex-column flex-wrap">
+                    <?php woocommerce_show_product_loop_sale_flash(); ?>
+                </div>
+
+                <div class="product__action d-flex flex-column flex-wrap">
+                    <div class="product-action-btn">
+                        <?php echo do_shortcode('[woosw]'); ?>
+                        <span class="product-action-tooltip">Add To Wishlist</span>
+                    </div>
+                    <div class="product-action-btn">
+                        <?php echo do_shortcode('[woosq]'); ?>
+                        <span class="product-action-tooltip">Quick view</span>
+                    </div>
+                    <div  class="product-action-btn">
+                        <?php echo do_shortcode('[woosc]'); ?>
+                        <span class="product-action-tooltip">Add To Compare</span>
+                    </div>
+                </div>
+                <div class="product__add transition-3">
+                    <?php harry_wooc_add_to_cart(); ?>
+                </div>
+            </div>
+            <div class="product__content">
+                <div class="product__rating d-flex">
+                    <?php woocommerce_template_loop_rating(); ?>
+                </div>
+                <h3 class="product__title">
+                    <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                </h3>
+                <div class="product__price">
+                    <span class="product__ammount"><?php woocommerce_template_loop_price(); ?></span>
+                </div>
+            </div>
+        </div>
+<?php
+}
+
+add_action('woocommerce_before_shop_loop_item_list', 'persona_product_list');
+
+
 
 
 function persona_product_details(){
