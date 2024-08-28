@@ -160,8 +160,6 @@ if (woocommerce_product_loop()) {
 									 */
 									do_action('woocommerce_before_shop_loop');
 
-									woocommerce_product_loop_start();
-
 									if (wc_get_loop_prop('total')) {
 										while (have_posts()) {
 											the_post();
@@ -174,8 +172,6 @@ if (woocommerce_product_loop()) {
 											wc_get_template_part('content', 'product-list');
 										}
 									}
-
-									woocommerce_product_loop_end();
 
 									/**
 									 * Hook: woocommerce_after_shop_loop.
